@@ -1,2 +1,1 @@
-# Data-Engineering
-for learning purposes
+My Data Engineering learning and projects
