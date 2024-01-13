@@ -1,0 +1,170 @@
+[
+  {
+    "champion_name": "Taric",
+    "pick_rate": "1.4%"
+  },
+  {
+    "champion_name": "Janna",
+    "pick_rate": "9.6%"
+  },
+  {
+    "champion_name": "Maokai",
+    "pick_rate": "1.6%"
+  },
+  {
+    "champion_name": "Bard",
+    "pick_rate": "6.1%"
+  },
+  {
+    "champion_name": "Rakan",
+    "pick_rate": "12.8%"
+  },
+  {
+    "champion_name": "Sona",
+    "pick_rate": "2.4%"
+  },
+  {
+    "champion_name": "Senna",
+    "pick_rate": "11.0%"
+  },
+  {
+    "champion_name": "Rell",
+    "pick_rate": "4.9%"
+  },
+  {
+    "champion_name": "Neeko",
+    "pick_rate": "1.9%"
+  },
+  {
+    "champion_name": "Soraka",
+    "pick_rate": "5.5%"
+  },
+  {
+    "champion_name": "Blitzcrank",
+    "pick_rate": "8.8%"
+  },
+  {
+    "champion_name": "Zyra",
+    "pick_rate": "3.8%"
+  },
+  {
+    "champion_name": "Pyke",
+    "pick_rate": "7.6%"
+  },
+  {
+    "champion_name": "Zilean",
+    "pick_rate": "2.5%"
+  },
+  {
+    "champion_name": "Braum",
+    "pick_rate": "3.6%"
+  },
+  {
+    "champion_name": "Renata Glasc",
+    "pick_rate": "5.0%"
+  },
+  {
+    "champion_name": "Vel'Koz",
+    "pick_rate": "1.6%"
+  },
+  {
+    "champion_name": "Thresh",
+    "pick_rate": "13.3%"
+  },
+  {
+    "champion_name": "Milio",
+    "pick_rate": "6.7%"
+  },
+  {
+    "champion_name": "Alistar",
+    "pick_rate": "5.8%"
+  },
+  {
+    "champion_name": "Zac",
+    "pick_rate": "0.7%"
+  },
+  {
+    "champion_name": "Leona",
+    "pick_rate": "4.8%"
+  },
+  {
+    "champion_name": "Xerath",
+    "pick_rate": "4.8%"
+  },
+  {
+    "champion_name": "Nami",
+    "pick_rate": "6.5%"
+  },
+  {
+    "champion_name": "Shaco",
+    "pick_rate": "1.1%"
+  },
+  {
+    "champion_name": "Heimerdinger",
+    "pick_rate": "1.0%"
+  },
+  {
+    "champion_name": "Sylas",
+    "pick_rate": "1.0%"
+  },
+  {
+    "champion_name": "Tahm Kench",
+    "pick_rate": "0.6%"
+  },
+  {
+    "champion_name": "Amumu",
+    "pick_rate": "0.6%"
+  },
+  {
+    "champion_name": "Twitch",
+    "pick_rate": "0.8%"
+  },
+  {
+    "champion_name": "Nautilus",
+    "pick_rate": "10.9%"
+  },
+  {
+    "champion_name": "Ashe",
+    "pick_rate": "5.7%"
+  },
+  {
+    "champion_name": "Lux",
+    "pick_rate": "5.1%"
+  },
+  {
+    "champion_name": "Brand",
+    "pick_rate": "2.0%"
+  },
+  {
+    "champion_name": "Seraphine",
+    "pick_rate": "2.0%"
+  },
+  {
+    "champion_name": "Lulu",
+    "pick_rate": "7.4%"
+  },
+  {
+    "champion_name": "Morgana",
+    "pick_rate": "3.2%"
+  },
+  {
+    "champion_name": "Karma",
+    "pick_rate": "7.6%"
+  },
+  {
+    "champion_name": "Swain",
+    "pick_rate": "1.6%"
+  },
+  {
+    "champion_name": "Pantheon",
+    "pick_rate": "1.0%"
+  },
+  {
+    "champion_name": "Yuumi",
+    "pick_rate": "4.9%"
+  },
+  {
+    "champion_name": "Hwei",
+    "pick_rate": "2.1%"
+  }
+]

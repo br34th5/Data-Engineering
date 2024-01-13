@@ -1,0 +1,692 @@
+[
+  {
+    "champion_name": "Taric",
+    "synergy": {
+      "Karthus": "70.83%",
+      "Yasuo": "68.91%",
+      "Lee Sin": "68.18%",
+      "Master Yi": "59.26%",
+      "Kog'Maw": "58.82%",
+      "Sivir": "58.62%",
+      "Varus": "56.63%",
+      "Swain": "56.45%",
+      "Seraphine": "56.41%",
+      "Kalista": "55.94%",
+      "Ziggs": "55.00%",
+      "Vayne": "54.01%",
+      "Jinx": "52.38%",
+      "Lucian": "51.91%",
+      "Kai'Sa": "51.81%",
+      "Ashe": "51.67%",
+      "Miss Fortune": "50.94%",
+      "Ezreal": "50.20%",
+      "Twitch": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Janna",
+    "synergy": {
+      "Seraphine": "58.66%",
+      "Vayne": "55.43%",
+      "Yasuo": "54.91%",
+      "Ziggs": "54.85%",
+      "Jinx": "53.96%",
+      "Ashe": "53.85%",
+      "Tristana": "53.63%",
+      "Kalista": "53.47%",
+      "Kog'Maw": "52.89%",
+      "Karthus": "52.83%",
+      "Jhin": "52.65%",
+      "Ezreal": "52.58%",
+      "Lucian": "52.51%",
+      "Draven": "52.25%",
+      "Twitch": "52.00%",
+      "Samira": "51.88%",
+      "Varus": "51.73%",
+      "Zeri": "51.64%",
+      "Caitlyn": "51.53%",
+      "Kai'Sa": "50.95%"
+    }
+  },
+  {
+    "champion_name": "Maokai",
+    "synergy": {
+      "Xayah": "60.00%",
+      "Ziggs": "58.33%",
+      "Karthus": "57.89%",
+      "Kai'Sa": "53.95%",
+      "Vayne": "53.51%",
+      "Sivir": "52.63%",
+      "Jhin": "52.46%",
+      "Aphelios": "52.46%",
+      "Draven": "52.38%",
+      "Ezreal": "52.29%",
+      "Samira": "51.81%",
+      "Varus": "51.53%",
+      "Zeri": "51.02%",
+      "Twitch": "50.00%",
+      "Ashe": "50.00%",
+      "Hwei": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Bard",
+    "synergy": {
+      "Nilah": "59.77%",
+      "Vayne": "55.15%",
+      "Caitlyn": "55.12%",
+      "Twitch": "55.06%",
+      "Ziggs": "54.37%",
+      "Tristana": "53.92%",
+      "Karthus": "53.62%",
+      "Seraphine": "53.05%",
+      "Lucian": "52.97%",
+      "Ezreal": "52.51%",
+      "Ashe": "52.44%",
+      "Jhin": "51.89%",
+      "Swain": "51.69%",
+      "Jinx": "51.34%",
+      "Zeri": "50.76%"
+    }
+  },
+  {
+    "champion_name": "Rakan",
+    "synergy": {
+      "Lucian": "56.02%",
+      "Jinx": "54.48%",
+      "Twitch": "54.35%",
+      "Seraphine": "54.17%",
+      "Ziggs": "54.08%",
+      "Vayne": "54.03%",
+      "Sivir": "53.73%",
+      "Jhin": "52.40%",
+      "Yasuo": "51.97%",
+      "Karthus": "51.90%",
+      "Ezreal": "51.77%",
+      "Ashe": "51.55%",
+      "Miss Fortune": "50.65%",
+      "Nilah": "50.61%",
+      "Varus": "50.35%",
+      "Draven": "50.12%"
+    }
+  },
+  {
+    "champion_name": "Sona",
+    "synergy": {
+      "Yasuo": "64.52%",
+      "Tristana": "60.29%",
+      "Ziggs": "58.51%",
+      "Samira": "57.45%",
+      "Sivir": "56.60%",
+      "Vayne": "56.55%",
+      "Nilah": "55.88%",
+      "Kog'Maw": "53.49%",
+      "Lucian": "53.04%",
+      "Xayah": "52.90%",
+      "Seraphine": "52.76%",
+      "Ezreal": "52.71%",
+      "Miss Fortune": "52.23%",
+      "Varus": "51.05%",
+      "Ashe": "50.93%",
+      "Caitlyn": "50.81%",
+      "Twitch": "50.21%"
+    }
+  },
+  {
+    "champion_name": "Senna",
+    "synergy": {
+      "Kalista": "57.48%",
+      "Nilah": "56.48%",
+      "Karthus": "56.18%",
+      "Zeri": "55.11%",
+      "Seraphine": "55.06%",
+      "Miss Fortune": "54.98%",
+      "Cho'Gath": "54.69%",
+      "Vayne": "54.60%",
+      "Ashe": "54.54%",
+      "Tahm Kench": "54.51%",
+      "Yasuo": "54.49%",
+      "Brand": "54.26%",
+      "Twitch": "54.15%",
+      "Swain": "53.87%",
+      "Jhin": "52.87%",
+      "Ziggs": "52.59%",
+      "Sivir": "52.21%",
+      "Ezreal": "51.36%",
+      "Tristana": "51.36%",
+      "Varus": "50.75%"
+    }
+  },
+  {
+    "champion_name": "Rell",
+    "synergy": {
+      "Ziggs": "61.31%",
+      "Karthus": "60.18%",
+      "Seraphine": "59.02%",
+      "Tristana": "58.16%",
+      "Lucian": "57.30%",
+      "Twitch": "56.30%",
+      "Miss Fortune": "54.44%",
+      "Ashe": "53.88%",
+      "Sivir": "53.49%",
+      "Jinx": "52.83%",
+      "Draven": "52.25%",
+      "Xayah": "52.10%",
+      "Ezreal": "52.08%",
+      "Kai'Sa": "51.33%",
+      "Samira": "51.15%",
+      "Zeri": "50.35%",
+      "Yasuo": "50.25%",
+      "Aphelios": "50.21%"
+    }
+  },
+  {
+    "champion_name": "Neeko",
+    "synergy": {
+      "Nilah": "77.78%",
+      "Yasuo": "59.46%",
+      "Xayah": "59.26%",
+      "Hwei": "58.82%",
+      "Lucian": "56.79%",
+      "Vayne": "53.85%",
+      "Twitch": "53.17%",
+      "Kalista": "50.75%",
+      "Ezreal": "50.72%",
+      "Ashe": "50.29%",
+      "Quinn": "50.00%",
+      "Samira": "50.00%",
+      "Varus": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Soraka",
+    "synergy": {
+      "Yasuo": "63.54%",
+      "Swain": "59.70%",
+      "Samira": "58.41%",
+      "Vayne": "57.03%",
+      "Ashe": "53.73%",
+      "Jinx": "53.47%",
+      "Ziggs": "53.38%",
+      "Jhin": "53.17%",
+      "Tristana": "52.80%",
+      "Lucian": "52.34%",
+      "Miss Fortune": "51.96%",
+      "Twitch": "51.63%",
+      "Draven": "50.30%"
+    }
+  },
+  {
+    "champion_name": "Blitzcrank",
+    "synergy": {
+      "Nilah": "58.59%",
+      "Xayah": "55.50%",
+      "Draven": "54.17%",
+      "Lucian": "53.85%",
+      "Ashe": "53.42%",
+      "Vayne": "52.91%",
+      "Twitch": "52.80%",
+      "Seraphine": "52.34%",
+      "Jinx": "51.90%",
+      "Karthus": "51.89%",
+      "Varus": "51.87%",
+      "Tristana": "51.72%",
+      "Miss Fortune": "51.53%",
+      "Zeri": "51.27%",
+      "Aphelios": "50.95%",
+      "Kalista": "50.84%",
+      "Jhin": "50.74%",
+      "Ezreal": "50.08%",
+      "Caitlyn": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Zyra",
+    "synergy": {
+      "Seraphine": "55.06%",
+      "Vayne": "54.84%",
+      "Tristana": "54.05%",
+      "Twitch": "52.96%",
+      "Samira": "51.98%",
+      "Jhin": "51.51%",
+      "Karthus": "51.16%",
+      "Draven": "50.65%",
+      "Xayah": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Pyke",
+    "synergy": {
+      "Karthus": "61.98%",
+      "Nilah": "60.43%",
+      "Yasuo": "57.30%",
+      "Tristana": "55.96%",
+      "Twitch": "55.08%",
+      "Ashe": "54.27%",
+      "Swain": "53.91%",
+      "Ziggs": "53.28%",
+      "Seraphine": "52.82%",
+      "Vayne": "52.64%",
+      "Varus": "51.58%",
+      "Jhin": "51.51%",
+      "Ezreal": "51.49%",
+      "Hwei": "51.43%",
+      "Draven": "50.95%"
+    }
+  },
+  {
+    "champion_name": "Zilean",
+    "synergy": {
+      "Swain": "58.97%",
+      "Hwei": "55.56%",
+      "Samira": "54.12%",
+      "Kog'Maw": "54.05%",
+      "Twitch": "53.80%",
+      "Aphelios": "53.47%",
+      "Vayne": "51.88%",
+      "Caitlyn": "51.79%",
+      "Seraphine": "51.67%",
+      "Ezreal": "51.07%",
+      "Ashe": "50.12%"
+    }
+  },
+  {
+    "champion_name": "Braum",
+    "synergy": {
+      "Sivir": "60.82%",
+      "Twitch": "59.55%",
+      "Xayah": "54.40%",
+      "Varus": "52.69%",
+      "Kog'Maw": "52.03%",
+      "Ashe": "51.92%",
+      "Jinx": "51.32%",
+      "Tristana": "50.94%",
+      "Vayne": "50.83%",
+      "Draven": "50.75%",
+      "Ezreal": "50.35%"
+    }
+  },
+  {
+    "champion_name": "Vel'Koz",
+    "synergy": {
+      "Karthus": "61.90%",
+      "Vayne": "55.34%",
+      "Sivir": "54.72%",
+      "Ashe": "54.44%",
+      "Aphelios": "53.25%",
+      "Seraphine": "52.38%",
+      "Jhin": "51.92%",
+      "Caitlyn": "51.43%",
+      "Ezreal": "51.22%",
+      "Twitch": "50.39%",
+      "Varus": "50.37%",
+      "Tristana": "50.00%",
+      "Miss Fortune": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Thresh",
+    "synergy": {
+      "Tristana": "55.29%",
+      "Hwei": "54.01%",
+      "Draven": "53.28%",
+      "Jinx": "52.84%",
+      "Aphelios": "51.39%",
+      "Twitch": "51.28%",
+      "Kalista": "51.17%",
+      "Samira": "51.08%",
+      "Vayne": "51.01%",
+      "Karthus": "50.91%",
+      "Lucian": "50.61%",
+      "Ashe": "50.26%",
+      "Yasuo": "50.24%"
+    }
+  },
+  {
+    "champion_name": "Milio",
+    "synergy": {
+      "Kog'Maw": "53.82%",
+      "Xayah": "52.76%",
+      "Lucian": "51.94%",
+      "Zeri": "51.56%",
+      "Vayne": "51.56%",
+      "Kalista": "51.56%",
+      "Ashe": "51.48%",
+      "Draven": "50.69%",
+      "Aphelios": "50.42%",
+      "Twitch": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Alistar",
+    "synergy": {
+      "Seraphine": "59.43%",
+      "Ziggs": "57.86%",
+      "Sivir": "55.20%",
+      "Hwei": "54.65%",
+      "Zeri": "53.37%",
+      "Ashe": "52.55%",
+      "Yasuo": "52.42%",
+      "Vayne": "52.01%",
+      "Twitch": "51.83%",
+      "Xayah": "51.49%",
+      "Jinx": "50.82%",
+      "Jhin": "50.68%",
+      "Ezreal": "50.58%",
+      "Draven": "50.28%",
+      "Miss Fortune": "50.20%"
+    }
+  },
+  {
+    "champion_name": "Zac",
+    "synergy": {
+      "Ziggs": "72.73%",
+      "Sivir": "71.43%",
+      "Zeri": "70.00%",
+      "Varus": "63.64%",
+      "Yasuo": "62.07%",
+      "Jhin": "59.32%",
+      "Kalista": "57.14%",
+      "Hwei": "57.14%",
+      "Twitch": "55.32%",
+      "Ezreal": "52.63%",
+      "Miss Fortune": "52.38%",
+      "Vayne": "50.75%",
+      "Swain": "50.00%",
+      "Tristana": "50.00%",
+      "Caitlyn": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Leona",
+    "synergy": {
+      "Seraphine": "56.47%",
+      "Xayah": "55.00%",
+      "Zeri": "54.63%",
+      "Ezreal": "54.35%",
+      "Twitch": "54.27%",
+      "Caitlyn": "53.68%",
+      "Jhin": "53.21%",
+      "Yasuo": "53.19%",
+      "Lucian": "52.72%",
+      "Miss Fortune": "51.92%",
+      "Aphelios": "51.70%",
+      "Tristana": "51.48%",
+      "Kalista": "51.16%"
+    }
+  },
+  {
+    "champion_name": "Xerath",
+    "synergy": {
+      "Ziggs": "55.24%",
+      "Jinx": "53.95%",
+      "Vayne": "53.32%",
+      "Samira": "52.63%",
+      "Xayah": "52.57%",
+      "Ashe": "52.33%",
+      "Jhin": "51.81%",
+      "Caitlyn": "51.12%",
+      "Hwei": "50.88%",
+      "Tristana": "50.70%",
+      "Ezreal": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Nami",
+    "synergy": {
+      "Swain": "59.52%",
+      "Brand": "55.69%",
+      "Karthus": "55.65%",
+      "Twitch": "52.16%",
+      "Ashe": "51.88%",
+      "Seraphine": "51.43%",
+      "Jhin": "51.32%",
+      "Vayne": "51.29%",
+      "Ezreal": "51.27%"
+    }
+  },
+  {
+    "champion_name": "Shaco",
+    "synergy": {
+      "Seraphine": "85.71%",
+      "Miss Fortune": "58.33%",
+      "Samira": "54.84%",
+      "Caitlyn": "54.43%",
+      "Jhin": "54.01%",
+      "Varus": "52.43%",
+      "Karthus": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Heimerdinger",
+    "synergy": {
+      "Zeri": "68.00%",
+      "Sivir": "57.89%",
+      "Draven": "54.29%",
+      "Jhin": "54.03%",
+      "Vayne": "53.49%",
+      "Miss Fortune": "52.78%",
+      "Ashe": "50.34%",
+      "Kalista": "50.00%",
+      "Twitch": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Sylas",
+    "synergy": {
+      "Karthus": "60.00%",
+      "Aphelios": "58.06%",
+      "Nilah": "57.89%",
+      "Miss Fortune": "57.14%",
+      "Kalista": "55.36%",
+      "Lucian": "54.65%",
+      "Seraphine": "54.55%",
+      "Sivir": "52.94%",
+      "Zeri": "52.63%",
+      "Vayne": "52.53%",
+      "Jhin": "52.38%",
+      "Ezreal": "51.14%",
+      "Twitch": "50.77%",
+      "Yasuo": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Tahm Kench",
+    "synergy": {
+      "Veigar": "80.00%",
+      "Ziggs": "75.00%",
+      "Karthus": "66.67%",
+      "Seraphine": "58.33%",
+      "Xayah": "58.33%",
+      "Jhin": "55.56%",
+      "Miss Fortune": "51.72%",
+      "Twitch": "51.28%",
+      "Kog'Maw": "50.00%",
+      "Kalista": "50.00%",
+      "Ashe": "50.00%",
+      "Ezreal": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Amumu",
+    "synergy": {
+      "Yasuo": "71.43%",
+      "Ziggs": "66.67%",
+      "Kalista": "64.15%",
+      "Lucian": "60.00%",
+      "Karthus": "60.00%",
+      "Hwei": "57.14%",
+      "Ezreal": "55.88%",
+      "Nilah": "55.56%",
+      "Draven": "55.41%",
+      "Miss Fortune": "54.37%",
+      "Ashe": "54.17%",
+      "Jinx": "53.85%",
+      "Kai'Sa": "53.60%",
+      "Tristana": "52.63%",
+      "Zeri": "50.00%",
+      "Veigar": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Twitch",
+    "synergy": {
+      "Sivir": "70.97%",
+      "Swain": "70.00%",
+      "Seraphine": "63.64%",
+      "Draven": "57.89%",
+      "Cassiopeia": "53.85%",
+      "Vayne": "53.54%",
+      "Jhin": "53.40%",
+      "Jinx": "52.27%",
+      "Ziggs": "51.72%",
+      "Zeri": "51.61%",
+      "Nilah": "50.00%",
+      "Kalista": "50.00%",
+      "Hwei": "50.00%",
+      "Tristana": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Nautilus",
+    "synergy": {
+      "Seraphine": "58.68%",
+      "Ziggs": "55.43%",
+      "Karthus": "55.21%",
+      "Lucian": "51.71%",
+      "Tristana": "51.50%",
+      "Samira": "51.14%",
+      "Kalista": "50.71%",
+      "Jinx": "50.13%"
+    }
+  },
+  {
+    "champion_name": "Ashe",
+    "synergy": {
+      "Karthus": "56.83%",
+      "Seraphine": "54.60%",
+      "Jinx": "54.17%",
+      "Nilah": "53.85%",
+      "Twitch": "53.55%",
+      "Ezreal": "51.69%",
+      "Swain": "51.32%",
+      "Ziggs": "50.79%",
+      "Lucian": "50.00%",
+      "Zeri": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Lux",
+    "synergy": {
+      "Karthus": "59.46%",
+      "Twitch": "53.57%",
+      "Xayah": "52.17%",
+      "Ashe": "51.05%",
+      "Varus": "50.88%",
+      "Tristana": "50.67%",
+      "Jinx": "50.00%",
+      "Zeri": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Brand",
+    "synergy": {
+      "Seraphine": "57.69%",
+      "Karthus": "55.17%",
+      "Yasuo": "55.17%",
+      "Kalista": "53.49%",
+      "Tristana": "52.31%",
+      "Xayah": "51.40%",
+      "Varus": "50.17%"
+    }
+  },
+  {
+    "champion_name": "Seraphine",
+    "synergy": {
+      "Vayne": "59.62%",
+      "Tristana": "59.38%",
+      "Miss Fortune": "52.50%",
+      "Ashe": "52.20%",
+      "Jinx": "51.11%",
+      "Draven": "50.94%"
+    }
+  },
+  {
+    "champion_name": "Lulu",
+    "synergy": {
+      "Miss Fortune": "55.96%",
+      "Sivir": "55.62%",
+      "Tristana": "55.22%",
+      "Ashe": "51.59%",
+      "Draven": "51.52%",
+      "Varus": "51.22%",
+      "Twitch": "51.14%",
+      "Jinx": "50.76%",
+      "Kog'Maw": "50.00%",
+      "Kalista": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Morgana",
+    "synergy": {
+      "Karthus": "55.56%",
+      "Nilah": "53.13%",
+      "Miss Fortune": "52.07%",
+      "Hwei": "51.72%",
+      "Vayne": "51.31%",
+      "Sivir": "50.91%",
+      "Draven": "50.63%",
+      "Tristana": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Karma",
+    "synergy": {
+      "Draven": "53.57%",
+      "Vayne": "51.30%",
+      "Jhin": "50.49%",
+      "Ezreal": "50.43%",
+      "Tristana": "50.42%"
+    }
+  },
+  {
+    "champion_name": "Swain",
+    "synergy": {
+      "Tristana": "64.29%",
+      "Karthus": "54.55%",
+      "Vayne": "54.01%",
+      "Jhin": "53.18%",
+      "Twitch": "50.70%",
+      "Nilah": "50.00%",
+      "Ziggs": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Pantheon",
+    "synergy": {
+      "Miss Fortune": "63.41%",
+      "Seraphine": "56.25%",
+      "Yasuo": "54.55%",
+      "Swain": "52.63%",
+      "Varus": "52.05%",
+      "Zeri": "50.00%"
+    }
+  },
+  {
+    "champion_name": "Yuumi",
+    "synergy": {
+      "Seraphine": "66.67%",
+      "Yasuo": "53.25%",
+      "Tristana": "52.55%",
+      "Vayne": "51.74%",
+      "Zeri": "51.45%",
+      "Twitch": "50.41%"
+    }
+  },
+  {
+    "champion_name": "Hwei",
+    "synergy": {
+      "Nilah": "51.61%"
+    }
+  }
+]
