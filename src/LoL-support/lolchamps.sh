@@ -29,7 +29,7 @@ echo "DISABLED BECAUSE SYNERGIES ARE ALREADY SCRAPED AND SAVED"
 #python step7-lolchamps.py
 echo "Step 7 complete: combining data into final_data"
 
-#python step8-priv.py
-echo "Step 8 in alpha mode: sending final_data to Postgres Server tables"
+#python step8-db.py
+echo "Step 8 in beta mode: sending final_data to Postgres Server tables"
 
 chmod +x lolchamps.sh
