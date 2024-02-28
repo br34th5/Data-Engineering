@@ -7,3 +7,4 @@ Python
 BeautifulSoup
 Selenium
 Pandas
+PostgreSQL + pgAdmin4 + psycopg2
