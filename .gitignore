@@ -1,6 +1,9 @@
-.vscode
-**settings.json
-/__pycache__
+.vscode/
+database.ini
+settings.json
+check.py
+step8-priv.py
+__pycache__/
 data
 Barbora
 notebooks
