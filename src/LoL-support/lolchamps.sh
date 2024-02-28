@@ -12,7 +12,7 @@ python step3-lolchamps.py
 echo "Step 3 complete: made data two-dimensional with Pandas, just for fun"
 
 #python step4-lolchamps.py
-#enable only if lost list of champion names
+#enable only if list of champion names are lost
 echo "Step 4 complete: saved champion names in a list"
 echo "TEMPORALY DISABLED, champ names already saved"
 
@@ -22,11 +22,14 @@ echo "DISABLED BECAUSE COUNTERS ARE ALREADY SCRAPED AND SAVED"
 #scraped only best counters. but script is unable to click for 'more counters'
 
 #python step6-lolchamps.py
-echo "Step 6 in building mode: collecting synergies for each support champion"
+echo "Step 6 in Beta mode: collecting synergies for each support champion"
 echo "DISABLED BECAUSE SYNERGIES ARE ALREADY SCRAPED AND SAVED"
 #EUW and KR versions. Atm EUW works only. Currently it only shows DUO synergy, but I want ADC-SUPP-JUNGLER Synergy
 
-python step7.py
-echo "Step 7 in building mode: combining data into final_data"
+#python step7-lolchamps.py
+echo "Step 7 complete: combining data into final_data"
+
+#python step8-priv.py
+echo "Step 8 in alpha mode: sending final_data to Postgres Server tables"
 
 chmod +x lolchamps.sh
