@@ -1,0 +1,11 @@
+from clickup to Anytype
+1. paziuret kokius 10 columns pasilikt, nes anytype tik tiek columns gali turet
+2. split csv by spaces(R) [p.s tikslai, uzduotys ir projektai tures but splitinami i: 1) tikslai ir uzduotys 2) projektai nes virs 1k eiluciu]
+2. then scplit also by (P)
+import splited spaces to Anytype spaces
+
+from discord to Logseq
+1. Extract and delete posts from discord
+2. Create channels as pages in Logseq
+3. Convert to EDN/JSON/OPML 
+4. Import to Logseq
