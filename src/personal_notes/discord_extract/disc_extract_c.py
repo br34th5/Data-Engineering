@@ -9,7 +9,7 @@ import pandas as pd
 from collections import deque
 import time
 
-#this bot scrapes whole server
+#this bot scrapes chosen categories.                                                        !!! manually choose categories
 
 # Load bot token from .env file
 load_dotenv()
@@ -33,6 +33,7 @@ client = Client(intents=intents, permissions=permissions)
 # Define rate limit settings
 RATE_LIMIT_THRESHOLD = 3  # Maximum number of requests per second
 RATE_LIMIT_BUCKET = RATE_LIMIT_THRESHOLD  # Initial token bucket capacity
+categories_to_monitor = ['Archived']                                                        #!!! manually choose categories
 
 # Initialize request counter
 request_count = 0
@@ -97,9 +98,12 @@ async def on_ready():
     
     for guild in client.guilds:
         print(f'Guild: {guild.name}')
-        for channel in guild.channels:
-            if isinstance(channel, discord.TextChannel):
-                await monitor_channel(channel)
+        for category in guild.categories:
+            if category.name in categories_to_monitor:
+                print(f'Category: {category.name}')
+                for channel in category.channels:
+                    if isinstance(channel, discord.TextChannel):
+                        await monitor_channel(channel)
     
     # Calculate and display the elapsed time
     elapsed_time = time.time() - start_time
