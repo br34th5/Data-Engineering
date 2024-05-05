@@ -1,0 +1,15 @@
+step1: download seb monthly csv israsus
+step2: rename them by month and add +(if parsing incomes) or -(if parsing spendings)
+step3: enjoy clean data in xlsx , showing Date/Sum/Moketojas/Paskirtis
+
+Scheme
+Step 0 DONE: Download monthly banko israsus
+Step 1 DONE: Extract wanted columns: "DATA", "SUMA", "MOKĖTOJO ARBA GAVĖJO PAVADINIMAS", "MOKĖJIMO PASKIRTIS" .... and clean data to make it more neat, understandable. f
+ilter-out own transactions
+
+TBD:
+Step 2: add new column "Category"
+Step 3: Excel calculations, analysis, pie chart and projections
+Step 4 DONE: Extract incomes and clean data: filter-out own transactions
+Extra: Calculate avg of 3 months fixed costs spending 
+Extra: Compare this realistic report with realistic numbers to my manual "personal finance" balance sheet 
