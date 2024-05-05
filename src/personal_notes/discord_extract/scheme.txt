@@ -1,0 +1,15 @@
+Discord zjbs, convenient del tags ir siaip galima betka share'int lengvai per discord.
+Taciau..
+Kas savaite/menesi reik extractint visus post'us ir juos store'int kazkur Open Source Privacy app'e.
+Kodel: nes pradeda laggint discord ir siaip ten not cool.
+
+
+The extraction code scheme:
+1. setting up a bot in the server https://www.youtube.com/watch?v=UYJDKSah-Ww
+pip install discord 
+pip install python-dotenv
+2. Read posts, copy and store each post content in json. (Dont forget to 1) right click on category and disable private category mode 2 server -> roles -> @everyone -> permissions -> view)
+3. Cleaning up: in chosen category delete channels and then create them again. Because it will take years to delete many posts, better to del channels
+4. run json_to_txt.py to save data in folders and txt as well
+5. pip uninstall discord
+
