@@ -21,8 +21,7 @@ The code is designed to be modular and extensible, allowing for easy integration
 """
 
 """
-#next: in Line 229
-modify Excel file: at the end of the entries in column "SUMA" make a formula to add sum all values of that column in order to calculate total income/spending.
+#next: in 4. modify Excel file: at the end of the entries in column "SUMA" make a formula to add sum all values of that column in order to calculate total income/spending.
 or if it's not possible then simply add sum function to B80 cell.
 
 #next: in 8: create DF for each found excel spending(-) file(ignore the last row with total sum) and join into one DF. 
@@ -111,6 +110,14 @@ for file_num in range(1, 13):
                 # Extract first 4 words from specified columns
                 bank_data["MOKĖTOJO ARBA GAVĖJO PAVADINIMAS"] = bank_data["MOKĖTOJO ARBA GAVĖJO PAVADINIMAS"].apply(extract_first_2_words)
                 bank_data["MOKĖJIMO PASKIRTIS"] = bank_data["MOKĖJIMO PASKIRTIS"].apply(extract_first_2_words)
+
+                # Replace commas with periods in the "SUMA" column
+                bank_data["SUMA"] = bank_data["SUMA"].str.replace(',', '.')
+
+                # Convert the values in the "SUMA" column to numeric data type
+                bank_data["SUMA"] = pd.to_numeric(bank_data["SUMA"], errors='coerce')
+                # Now the "SUMA" column contains numeric values
+
 
                 # Append the DataFrame to the appropriate dictionary based on file type
                 if file_type == '+':
@@ -209,6 +216,12 @@ for i, file_name in enumerate(excel_files):
     for row in sheet.iter_rows(values_only=True):
         merged_sheet.append(row)
 
+    # Add total sum formula(B2:B100) at the end of the last row
+    last_row = merged_sheet.max_row
+    formula_str = f'=SUM(B2:B100)'
+    merged_sheet[f'A{last_row + 1}'] = formula_str
+
+
 # Save the merged workbook to the output directory
 output_filename = os.path.join(output_directory, "merged_spending_data.xlsx")
 merged_workbook.save(output_filename)
@@ -228,8 +241,6 @@ excel_files = [file for file in files if file.endswith('.xlsx')]
 merged_workbook = openpyxl.Workbook()
 
 # Loop through each file and add it as a new sheet to the workbook
-#additionally add at the end of the entries in column "SUMA" make a formula to add sum all values of that column in order to calculate total income/spending.
-#or if it's not possible then simply add sum function(=SUM(B1:B79)) to B80 cell in each sheet
 for i, file_name in enumerate(excel_files):
     # Load the workbook from file
     workbook = openpyxl.load_workbook(os.path.join(directory, file_name))
@@ -249,9 +260,16 @@ for i, file_name in enumerate(excel_files):
     for row in sheet.iter_rows(values_only=True):
         merged_sheet.append(row)
 
-# Save the merged workbook to the output directory
-output_filename = os.path.join(output_directory, "merged_income_data.xlsx")
-merged_workbook.save(output_filename)
+    # Add total sum formula(B2:B100) at the end of the last row
+    last_row = merged_sheet.max_row
+    formula_str = f'=SUM(B2:B100)'
+    merged_sheet[f'A{last_row + 1}'] = formula_str
+    
+    
+    # Save the merged workbook to the output directory
+    output_filename = os.path.join(output_directory, "merged_income_data.xlsx")
+    merged_workbook.save(output_filename)
+
 
 
 
@@ -340,12 +358,17 @@ kategorijas ir issaugau kaip cat-income.xlsx ir cat-spendings.xlsx.
 priedo, manually sukuriau Analysis_income.xlsx ir Analysis_spending.xlsx, kad script'as neoverwritintu mano kategoriju ir analiziu darbo.
 belieka prijungti sheets, kad viskas susije su income butu vienam xlsx faile, ir viskas susije su spendings butu antram xlsx faile.
 """
+"""
+    # Save the merged workbook to the output directory
+    output_filename = os.path.join(output_directory, "merged_income_data.xlsx")
+    merged_workbook.save(output_filename)
+"""
 #INCOME
 def merge_additional_sheets(base_file, additional_files, output_file):
     # Create the output directory if it doesn't exist
     output_directory_analysis = '/home/eikov/fin/analysis'
     os.makedirs(output_directory_analysis, exist_ok=True)
-
+"""
     # Create a Pandas ExcelWriter object
     with pd.ExcelWriter(f'{output_directory_analysis}/{output_file}', engine='xlsxwriter') as writer:
         # Write the base file to the output file
@@ -358,7 +381,7 @@ def merge_additional_sheets(base_file, additional_files, output_file):
             additional_df = pd.read_excel(f'{output_directory_analysis}/{file}', sheet_name=None)
             for sheet_name, df in additional_df.items():
                 df.to_excel(writer, sheet_name=f'{sheet_name}', index=False)
-
+"""
 # List of additional files to merge as new sheets
 additional_files = ['cat-income.xlsx', 'Analysis_income.xlsx']
 
@@ -391,3 +414,84 @@ additional_files = ['cat-spendings.xlsx', 'Analysis_spending.xlsx']
 # Merge additional sheets with merged_income_data.xlsx
 merge_additional_sheets('merged_spending_data.xlsx', additional_files, 'Galutinis_spendings.xlsx')
 
+
+"""
+#turiu svarius spendings ir income israsus: merged_spending_data.xlsx ir merged_income_data.xlsx
+taipogi unikaliu moketoju/gaveju sarasus is pajamu ir islaidu. rankiniu budu priskiriu kiekvienam gavejui/moketojui
+kategorijas ir issaugau kaip cat-income.xlsx ir cat-spendings.xlsx. 
+priedo, manually sukuriau Analysis_income.xlsx ir Analysis_spending.xlsx, kad script'as neoverwritintu mano kategoriju ir analiziu darbo.
+belieka prijungti sheets, kad viskas susije su income butu vienam xlsx faile, ir viskas susije su spendings butu antram xlsx faile.
+"""
+"""
+    # Save the merged workbook to the output directory
+    output_filename = os.path.join(output_directory, "merged_income_data.xlsx")
+    merged_workbook.save(output_filename)
+"""
+#INCOME
+def merge_additional_sheets(base_file, additional_files, output_file):
+    # Create the output directory if it doesn't exist
+    output_directory_analysis = '/home/eikov/fin/analysis'
+    os.makedirs(output_directory_analysis, exist_ok=True)
+
+    # Create a Pandas ExcelWriter object
+    with pd.ExcelWriter(f'{output_directory_analysis}/{output_file}', engine='xlsxwriter') as writer:
+        # Write the base file to the output file
+        base_df = pd.read_excel(f'{output_directory_analysis}/{base_file}', sheet_name=None)
+        for sheet_name, df in base_df.items():
+            df.to_excel(writer, sheet_name=sheet_name, index=False)
+            # Add total sum formula to the end of the last row
+            last_row = df.shape[0] + 1
+            formula_str = f'=SUM(B2:B{last_row})'
+            writer.sheets[sheet_name].write(f'A{last_row + 1}', formula_str)
+        
+        # Write additional files to the output file as new sheets
+        for file in additional_files:
+            additional_df = pd.read_excel(f'{output_directory_analysis}/{file}', sheet_name=None)
+            for sheet_name, df in additional_df.items():
+                df.to_excel(writer, sheet_name=f'{sheet_name}', index=False)
+                # Add total sum formula to the end of the last row
+                if file not in additional_files:
+                    last_row = df.shape[0] + 1
+                    formula_str = f'=SUM(B2:B{last_row})'
+                    writer.sheets[sheet_name].write(f'A{last_row + 1}', formula_str)
+
+# List of additional files to merge as new sheets
+additional_files = ['cat-income.xlsx', 'Analysis_income.xlsx']
+
+# Merge additional sheets with merged_income_data.xlsx
+merge_additional_sheets('merged_income_data.xlsx', additional_files, 'Galutinis_Income.xlsx')
+
+
+#SPENDINGS
+def merge_additional_sheets(base_file, additional_files, output_file):
+    # Create the output directory if it doesn't exist
+    output_directory_analysis = '/home/eikov/fin/analysis'
+    os.makedirs(output_directory_analysis, exist_ok=True)
+
+    # Create a Pandas ExcelWriter object
+    with pd.ExcelWriter(f'{output_directory_analysis}/{output_file}', engine='xlsxwriter') as writer:
+        # Write the base file to the output file
+        base_df = pd.read_excel(f'{output_directory_analysis}/{base_file}', sheet_name=None)
+        for sheet_name, df in base_df.items():
+            df.to_excel(writer, sheet_name=sheet_name, index=False)
+            # Add total sum formula to the end of the last row
+            last_row = df.shape[0] + 1
+            formula_str = f'=SUM(B2:B{last_row})'
+            writer.sheets[sheet_name].write(f'A{last_row + 1}', formula_str)
+        
+        # Write additional files to the output file as new sheets
+        for file in additional_files:
+            additional_df = pd.read_excel(f'{output_directory_analysis}/{file}', sheet_name=None)
+            for sheet_name, df in additional_df.items():
+                df.to_excel(writer, sheet_name=f'{sheet_name}', index=False)
+                # Add total sum formula to the end of the last row
+                if file not in additional_files:
+                    last_row = df.shape[0] + 1
+                    formula_str = f'=SUM(B2:B{last_row})'
+                    writer.sheets[sheet_name].write(f'A{last_row + 1}', formula_str)
+
+# List of additional files to merge as new sheets
+additional_files = ['cat-spendings.xlsx', 'Analysis_spending.xlsx']
+
+# Merge additional sheets with merged_income_data.xlsx
+merge_additional_sheets('merged_spending_data.xlsx', additional_files, 'Galutinis_spendings.xlsx')
