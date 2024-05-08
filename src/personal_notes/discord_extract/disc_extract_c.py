@@ -33,7 +33,7 @@ client = Client(intents=intents, permissions=permissions)
 # Define rate limit settings
 RATE_LIMIT_THRESHOLD = 3  # Maximum number of requests per second
 RATE_LIMIT_BUCKET = RATE_LIMIT_THRESHOLD  # Initial token bucket capacity
-categories_to_monitor = ['Archived']                                                        #!!! manually choose categories
+categories_to_monitor = ['Aktualijos']                                                        #!!! manually choose categories
 
 # Initialize request counter
 request_count = 0
@@ -145,19 +145,37 @@ def remove_duplicates(json_file):
     # Drop duplicates based on message ID
     clean_df = df.drop_duplicates(subset=['id'])
 
-    # Open the new file to save cleaned messages
-    with open('clean_messages.json', 'w') as file:
-        # Serialize each message individually and write them to the file
+    # Open the file to append cleaned messages
+    # Set to store unique message IDs encountered so far
+    unique_message_ids = set()
+
+    # Open the file to append cleaned messages
+    with open('clean_messages.json', 'a') as file:
+        # Read existing messages to populate unique_message_ids set
+        with open('clean_messages.json', 'r') as existing_file:
+            for line in existing_file:
+                try:
+                    existing_message = json.loads(line)
+                    unique_message_ids.add(existing_message['id'])
+                except json.JSONDecodeError as e:
+                    print(f"Error loading JSON data: {e}. Skipping this line and continuing.")
+
+        # Serialize each message individually and write them to the file if the ID is not already present
         for _, message_row in clean_df.iterrows():
-            message_data = {
-                'id': message_row['id'],
-                'category': message_row['category'],
-                'channel': message_row['channel'],
-                'content': message_row['content'],
-                'timestamp': message_row['timestamp']
-            }
-            json.dump(message_data, file)
-            file.write('\n')  # Add newline for readability
+            message_id = message_row['id']
+            if message_id not in unique_message_ids:
+                message_data = {
+                    'id': message_id,
+                    'category': message_row['category'],
+                    'channel': message_row['channel'],
+                    'content': message_row['content'],
+                    'timestamp': message_row['timestamp']
+                }
+                json.dump(message_data, file)
+                file.write('\n')  # Add newline for readability
+                unique_message_ids.add(message_id)  # Add the ID to the set of unique IDs
+
+
 
 # Example usage:
 remove_duplicates('messages.json')

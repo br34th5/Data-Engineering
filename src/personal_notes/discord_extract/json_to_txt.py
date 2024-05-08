@@ -2,7 +2,7 @@ import os
 import json
 import pandas as pd
 
-#next: use regex for <#832925562611302400> format. either show these numbers as letters and tags or don't show at all
+
 
 # Load the messages from the JSON file
 with open('clean_messages.json', 'r', encoding='utf-8') as file:
