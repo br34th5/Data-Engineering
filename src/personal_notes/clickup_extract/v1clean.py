@@ -3,13 +3,14 @@ import pandas as pd
 
 #preparing clickup exported CSV file for cleaning unnecessary columns
 # Read the CSV file into a DataFrame
-csv_file = 'export_copy.csv'  # Replace 'your_file.csv' with the path to your CSV file
+csv_file = 'clickup2.csv'  # Replace 'your_file.csv' with the path to your CSV file
 df = pd.read_csv(csv_file)
 
 # Specify the columns you want to delete
 columns_to_delete = ['Task ID', 'Attachments', 'Date Created', 'Date Created Text','Due Date', 'Due Date Text','Start Date', 'Start Date Text','Assignees', 'Folder Name', 'Time Estimated', 
                      'Time Estimated Text', 'Checklists', 'Comments', 'Assigned Comments', 'Time Spent', 'Time Spent', 'Time Spent Text',
-                      'Rolled Up Time', 'Rolled Up Time Text']  
+                      'Rolled Up Time', 'Rolled Up Time Text',
+                      'Parent ID', 'Tags', 'Priority', 'Status']  
 # Replace with the names of columns you want to delete
 
 # Drop the specified columns from the DataFrame

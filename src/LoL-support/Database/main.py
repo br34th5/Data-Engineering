@@ -2,15 +2,6 @@ import psycopg2
 from config import config
 
 # Connect to the PostgreSQL database
-"""conn = psycopg2.connect(
-    host="127.0.0.1",
-    port="5432",
-    dbname="league",
-    user="postgres",
-    password="0809"
-)
-"""
-
 def connect():
     connection = None
     try:

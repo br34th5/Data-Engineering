@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 
+"""
 # After posts are scraped, time to look for duplicates and remove them:
 def remove_duplicates(json_file):
     # Read the contents of the JSON file into a list
@@ -43,3 +44,6 @@ def remove_duplicates(json_file):
 
 # Example usage:
 remove_duplicates('messages.json')
+"""
+
+# working with final data

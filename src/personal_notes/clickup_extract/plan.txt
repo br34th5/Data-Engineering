@@ -1,0 +1,11 @@
+extractinu data is clickup, palieku tik:
+1) project  management category ~30lines
+2) data programming  ~40 lines
+3) climate and life ~15lines 
+4) to-do
+
+should be fine for free version. if not, leave only 1) and 2)
+3)  and 4) to Joplin
+
+
+
