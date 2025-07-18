@@ -2,9 +2,16 @@
 database.ini
 settings.json
 check.py
-step8-priv.py
-__pycache__/
 data
 Barbora
 notebooks
 first scrape tries
+personal_finance/fin/analysis/
+personal_finance/income
+personal_finance/OGCSV
+personal_finance/spending
+personal_notes/clickup_extract/old_output
+personal_notes/clickup_extract/source data
+personal_notes/discord_extract/categories
+src/personal_notes/discord_extract/.env.env
+*.env
