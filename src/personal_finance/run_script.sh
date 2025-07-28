@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# activate the virtual environment, because that's where all modules are installed, not in system python
+source ~/scraping_env/bin/activate
+
 # Navigate to the directory where your Python script is located
 cd /home/eikov/fin
 
