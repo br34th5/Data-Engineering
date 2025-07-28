@@ -6,7 +6,7 @@ data
 Barbora
 notebooks
 first scrape tries
-*personal_finance/fin/analysis/Manually polished
+*personal_finance/fin/analysis
 *personal_finance/income
 *personal_finance/OGCSV
 *personal_finance/spending
@@ -15,3 +15,6 @@ first scrape tries
 *personal_notes/discord_extract/categories
 *src/personal_notes/discord_extract/.env.env
 *.env
+*Data-Engineering
+__pycache__
+
