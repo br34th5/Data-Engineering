@@ -7,6 +7,6 @@ source ~/scraping_env/bin/activate
 cd /home/eikov/fin
 
 # Run your Python script
-python scrape.py
+python3 scrape.py
 
 chmod +x run_script.sh
