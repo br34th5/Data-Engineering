@@ -155,8 +155,8 @@ print("All files processed.")
 
 
 #Merge spending seperate xlsx files to one
-directory = '/home/eikov/scraping_env/Data-Engineering/src/personal_finance/fin/spendings'
-output_directory = '/home/eikov/scraping_env/Data-Engineering/src/personal_finance/fin/analysis'
+directory = '/home/eikov/fin/spendings'
+output_directory = '/home/eikov/fin/analysis'
 
 # List all files in the directory
 files = os.listdir(directory)
@@ -193,8 +193,8 @@ merged_workbook.save(output_filename)
 
 
 #Merge income seperate xlsx files to one
-directory = '/home/eikov/scraping_env/Data-Engineering/src/personal_finance/fin/income'
-output_directory = '/home/eikov/scraping_env/Data-Engineering/src/personal_finance/fin/analysis'
+directory = '/home/eikov/fin/income'
+output_directory = '/home/eikov/fin/analysis'
 
 # List all files in the directory
 files = os.listdir(directory)
