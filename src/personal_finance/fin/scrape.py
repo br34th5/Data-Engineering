@@ -4,8 +4,10 @@ from io import StringIO
 import json
 import openpyxl
 
+#simplified working version
+
 # Define the directory containing the CSV files
-directory = '/home/eikov/scraping_env/Data-Engineering/src/personal_finance/fin/OG-CSV'
+directory = '/home/eikov/fin/OG-CSV'
 
 # Define the pattern for file names
 file_pattern = '{}{}.csv'  # {} will be replaced by the file number and +/- for the file type

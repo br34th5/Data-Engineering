@@ -8,6 +8,10 @@ import openpyxl
 # =sum() shows 0
 # galutinis spendings looks, but income does not merge Categories and Analysis_Income into galutinis_income.xlsx
 
+#TBD:
+# a script scraped all entries and then gave me unique string values in .xlsx format. 
+# 1) I want to see the sum  each unique string . What's the best approach to do this, in pandas before writing to .xlsx or somehow edit it after saving?
+# 2) Then as a second [B] column I assigned each unique string value a sub-category and [C] column as Category. to do analysis on different Sheet named [Analysis] 
 
 
 """
@@ -201,28 +205,25 @@ merged_workbook = openpyxl.Workbook()
 
 # Loop through each file and add it as a new sheet to the workbook
 for i, file_name in enumerate(excel_files):
-    # Load the workbook from file
     workbook = openpyxl.load_workbook(os.path.join(directory, file_name))
-    
-    # Get the active sheet from the loaded workbook
     sheet = workbook.active
     
-    # Copy the active sheet to the merged workbook
     if i == 0:
-        # For the first sheet, use the default sheet name 'Sheet'
         merged_sheet = merged_workbook.active
     else:
-        # For subsequent sheets, create a new sheet with the file name as the sheet name
         merged_sheet = merged_workbook.create_sheet(title=f"Sheet{i+1}")
     
-    # Copy data from the original sheet to the merged sheet
     for row in sheet.iter_rows(values_only=True):
+        if not any(row):  # skip empty rows
+            continue
         merged_sheet.append(row)
 
-    # Add total sum formula(B2:B100) at the end of the last row
-    last_row = merged_sheet.max_row
-    formula_str = f'=SUM(B2:B100)'
-    merged_sheet[f'A{last_row + 1}'] = formula_str
+    # Add total formula
+    data_start_row = 2
+    data_end_row = merged_sheet.max_row
+    formula_str = f'=SUM(B{data_start_row}:B{data_end_row})'
+    merged_sheet[f'A{data_end_row + 1}'] = 'TOTAL'
+    merged_sheet[f'B{data_end_row + 1}'] = formula_str
 
 
 # Save the merged workbook to the output directory
@@ -283,34 +284,54 @@ for i, file_name in enumerate(excel_files):
 
 
 
-# finding unique strings in INCOME and categorise it
+# finding unique strings in SPENDINGS and categorise it
 # Path to the directory containing the file
-output_directory = '/home/eikov/fin/analysis/'
-# Specify the filename
-filename = 'merged_income_data.xlsx'
-# Construct the full path
-file_path = f'{output_directory}/{filename}'
+output_directory2 = '/home/eikov/fin/analysis'
+filename2 = 'merged_income_data.xlsx'
+file_path2 = f'{output_directory2}/{filename2}'
 
-# Initialize an empty set to store unique values
-unique_values = set()
+# Read Excel file
+xls = pd.ExcelFile(file_path2)
 
-# Read the Excel file
-xls = pd.ExcelFile(file_path)
+# Create empty DataFrame to collect values
+all_data = pd.DataFrame(columns=['SUMA', 'MOKĖTOJO ARBA GAVĖJO PAVADINIMAS'])
 
-# Iterate over each sheet in the Excel file
+# Iterate through each sheet
 for sheet_name in xls.sheet_names:
-    # Read the sheet into a DataFrame
     df = pd.read_excel(xls, sheet_name)
-    # Check the number of columns in the DataFrame
-    if df.shape[1] < 4:  # If the number of columns is less than 4
-        print(f"Skipping sheet '{sheet_name}' because it has less than 4 columns.")
-        continue  # Skip to the next sheet
-    # Extract unique values from column 3 (Python uses zero-based indexing, so the third column is indexed as 2)
-    unique_values.update(df.iloc[:, 2].unique())
 
-# Create a DataFrame with unique values and save it to 'unique-strings-income.xlsx'
-unique_df = pd.DataFrame({'Unique Values': list(unique_values)})
-unique_df.to_excel(f'{output_directory}/unique-strings-income.xlsx', index=False)
+    if df.shape[1] < 4:
+        print(f"Skipping sheet '{sheet_name}' because it has less than 4 columns.")
+        continue
+
+    # Extract 'SUMA' and 'STRING' columns by index — adjust if needed
+    amounts = df.iloc[:, 1]  # this is column B, the 'SUMA'
+    labels = df.iloc[:, 2]   # this is column C, the 'MOKĖTOJO ARBA GAVĖJO PAVADINIMAS'
+
+
+    # Combine into one DataFrame
+    temp_df = pd.DataFrame({'SUMA': amounts, 'MOKĖTOJO ARBA GAVĖJO PAVADINIMAS': labels})
+
+    # Drop rows where either SUMA or STRING is missing
+    temp_df.dropna(subset=['SUMA', 'MOKĖTOJO ARBA GAVĖJO PAVADINIMAS'], inplace=True)
+
+    # 🛠 Clean and convert SUMA properly
+    temp_df['SUMA'] = (
+        temp_df['SUMA']
+        .astype(str)
+        .str.replace(r'[^\d,.-]', '', regex=True)
+        .str.replace(',', '.', regex=False)
+        .astype(float)
+    )
+    
+
+    all_data = pd.concat([all_data, temp_df], ignore_index=True)
+
+# Group and sum
+grouped = all_data.groupby('MOKĖTOJO ARBA GAVĖJO PAVADINIMAS', as_index=False)['SUMA'].sum()
+
+# Save results
+grouped.to_excel(f'{output_directory2}/summed-strings-income.xlsx', index=False)
 
 
 
@@ -321,32 +342,51 @@ unique_df.to_excel(f'{output_directory}/unique-strings-income.xlsx', index=False
 
 # finding unique strings in SPENDINGS and categorise it
 # Path to the directory containing the file
-output_directory2 = '/home/eikov/fin/analysis/'
-# Specify the filename
+output_directory2 = '/home/eikov/fin/analysis'
 filename2 = 'merged_spending_data.xlsx'
-# Construct the full path
 file_path2 = f'{output_directory2}/{filename2}'
 
-# Initialize an empty set to store unique values
-unique_values2 = set()
-
-# Read the Excel file
+# Read Excel file
 xls = pd.ExcelFile(file_path2)
 
-# Iterate over each sheet in the Excel file
-for sheet_name in xls.sheet_names:
-    # Read the sheet into a DataFrame
-    df = pd.read_excel(xls, sheet_name)
-    # Check the number of columns in the DataFrame
-    if df.shape[1] < 4:  # If the number of columns is less than 4
-        print(f"Skipping sheet '{sheet_name}' because it has less than 4 columns.")
-        continue  # Skip to the next sheet
-    # Extract unique values from column 3 (Python uses zero-based indexing, so the third column is indexed as 2)
-    unique_values2.update(df.iloc[:, 2].unique())
+# Create empty DataFrame to collect values
+all_data = pd.DataFrame(columns=['SUMA', 'MOKĖTOJO ARBA GAVĖJO PAVADINIMAS'])
 
-# Create a DataFrame with unique values and save it to 'unique-strings-spendings.'
-unique_df = pd.DataFrame({'Unique Values': list(unique_values2)})
-unique_df.to_excel(f'{output_directory}/unique-strings-spendings.xlsx', index=False)
+# Iterate through each sheet
+for sheet_name in xls.sheet_names:
+    df = pd.read_excel(xls, sheet_name)
+
+    if df.shape[1] < 4:
+        print(f"Skipping sheet '{sheet_name}' because it has less than 4 columns.")
+        continue
+
+    # Extract 'SUMA' and 'STRING' columns by index — adjust if needed
+    amounts = df.iloc[:, 1]  # this is column B, the 'SUMA'
+    labels = df.iloc[:, 2]   # this is column C, the 'MOKĖTOJO ARBA GAVĖJO PAVADINIMAS'
+
+
+    # Combine into one DataFrame
+    temp_df = pd.DataFrame({'SUMA': amounts, 'MOKĖTOJO ARBA GAVĖJO PAVADINIMAS': labels})
+
+    # Drop rows where either SUMA or STRING is missing
+    temp_df.dropna(subset=['SUMA', 'MOKĖTOJO ARBA GAVĖJO PAVADINIMAS'], inplace=True)
+
+    # 🛠 Clean and convert SUMA properly
+    temp_df['SUMA'] = (
+        temp_df['SUMA']
+        .astype(str)
+        .str.replace(r'[^\d,.-]', '', regex=True)
+        .str.replace(',', '.', regex=False)
+        .astype(float)
+    )
+
+    all_data = pd.concat([all_data, temp_df], ignore_index=True)
+
+# Group and sum
+grouped = all_data.groupby('MOKĖTOJO ARBA GAVĖJO PAVADINIMAS', as_index=False)['SUMA'].sum()
+
+# Save results
+grouped.to_excel(f'{output_directory2}/summed-strings-spendings.xlsx', index=False)
 
 
 
@@ -354,7 +394,7 @@ unique_df.to_excel(f'{output_directory}/unique-strings-spendings.xlsx', index=Fa
 
 """
 1) AUTO: turiu svarius spendings ir income israsus: merged_spending_data.xlsx ir merged_income_data.xlsx
-2) MANUAL: turiu unikaliu moketoju/gaveju sarasus is pajamu ir islaidu[unique-strings-.xlsx]. rankiniu budu priskiriu kiekvienam gavejui/moketojui
+2) MANUAL: turiu unikaliu moketoju/gaveju sarasus is pajamu ir islaidu[summed-strings-income/spendings.xlsx]. rankiniu budu priskiriu kiekvienam gavejui/moketojui
 kategorijas ir issaugau kaip cat-income.xlsx ir cat-spendings.xlsx. 
 3) MANUAL: manually sukuriau Analysis_income.xlsx ir Analysis_spending.xlsx, kad script'as neoverwritintu mano kategoriju ir analiziu darbo.
 4) AUTO: belieka prijungti sheets, kad viskas susije su income butu vienam xlsx faile, ir viskas susije su spendings butu antram xlsx faile.
