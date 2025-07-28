@@ -6,16 +6,16 @@ data
 Barbora
 notebooks
 first scrape tries
-*personal_finance/fin/analysis
-*personal_finance/fin/analysis/Manually polished
-*personal_finance/income
-*personal_finance/OG-CSV
-*personal_finance/spending
-*personal_notes/clickup_extract/old_output
-*personal_notes/clickup_extract/source data
-*personal_notes/discord_extract/categories
-*src/personal_notes/discord_extract/.env.env
-*.env
-*Data-Engineering
+personal_finance/fin/analysis
+personal_finance/fin/analysis/Manually polished
+personal_finance/income
+personal_finance/OG-CSV
+personal_finance/spending
+personal_notes/clickup_extract/old_output
+personal_notes/clickup_extract/source data
+personal_notes/discord_extract/categories
+src/personal_notes/discord_extract/.env.env
+.env
+Data-Engineering
 __pycache__
 
