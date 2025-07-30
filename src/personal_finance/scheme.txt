@@ -1,6 +1,8 @@
 step1: download seb monthly csv israsus
 step2: rename them by month and add +(if parsing incomes) or -(if parsing spendings)
 step3: enjoy clean data in xlsx , showing Date/Sum/Moketojas/Paskirtis
+step4: edit summed-strings-spendings.xlsx to assign each row sub-category and category, rename to a) cat-income.xlsx b) cat-spendings.xlsx then rerun .py again
+step5: run pandamat.py for visuals, charts, analysis
 
 Scheme
 Step 0 DONE: Download monthly banko israsus

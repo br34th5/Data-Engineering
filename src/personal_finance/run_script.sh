@@ -7,6 +7,9 @@ source ~/scraping_env/bin/activate
 cd /home/eikov/fin
 
 # Run your Python script
-python3 scrape.py
+python3 scrape.py  #or latest version like v2.3.py
+
+# optional: for better analysis create visual charts with pandas, mathplotlib
+python3 pandamat.py
 
 chmod +x run_script.sh
