@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from openpyxl import load_workbook
 from openpyxl.drawing.image import Image as ExcelImage
 
-#so far best one
+#good
 
 # === Load data ===
 excel_file = "/home/eikov/fin/analysis/Manually-polished/2025/Galutinis_spendings.xlsx"  # <-- Replace with your actual file
