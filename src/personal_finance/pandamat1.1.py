@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 from openpyxl import load_workbook
 from openpyxl.drawing.image import Image as OpenpyxlImage
 
+#basic
+
 # File paths
 excel_file = '/home/eikov/fin/analysis/Manually-polished/2025/Galutinis_spendings.xlsx'  # Replace with actual file name
 chart_image_path = '/home/eikov/fin/analysis/Manually-polished/2025/spending_pie_by_category.png'
